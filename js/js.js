@@ -2,8 +2,8 @@
 function lo(th, url) {
 	$.ajax(url, { cache: false, success: function (x) { $(th).html(x) } })
 }
-function good(news) {
-	$.post("./api/good.php", { news }, function () {
+function good(id) {
+	$.post("./api/good.php", { id }, (res) => {
 		location.reload();
 	})
 }
